@@ -24,6 +24,12 @@ namespace _2022_02_15_Nobel_dij
                 MessageBox.Show("toltson ki minden mezot");
                 return;
             }
+
+            if (int.TryParse(textBox1.Text, out int év) || év< 1989 )
+            {
+                MessageBox.Show("hiba! az evszam nem megfelelo");
+                return;
+            }
          
         }
     }
