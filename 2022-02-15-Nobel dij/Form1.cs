@@ -16,5 +16,15 @@ namespace _2022_02_15_Nobel_dij
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text==""|| textBox2.Text=="" || textBox3.Text=="" ||textBox4.Text=="")
+            {
+                MessageBox.Show("toltson ki minden mezot");
+                return;
+            }
+         
+        }
     }
 }
