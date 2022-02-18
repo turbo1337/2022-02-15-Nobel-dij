@@ -31,13 +31,22 @@ namespace _2022_02_15_Nobel_dij
                 MessageBox.Show("hiba! az evszam nem megfelelo");
                 return;
             }
-            StringWriter sw = new StringWriter("uj_dijazott.txt");
 
-            sw.WriteLine("Év;Név;SzületésHalálozás;Országkód");
-            sw.WriteLine(textBox1.Text + ";"+textBox2.Text+";" + textBox3.Text + ";"+ textBox4.Text + ";");
+            try
+            {
+                StringWriter sw = new StringWriter("uj_dijazott.txt");
 
-            sw.Close();
-         
+                sw.WriteLine("Év;Név;SzületésHalálozás;Országkód");
+                sw.WriteLine(textBox1.Text + ";" + textBox2.Text + ";" + textBox3.Text + ";" + textBox4.Text + ";");
+
+                sw.Close();
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show($"hiba az allomany irasanal\n{ex.message}");
+            }
         }
     }
 }
